@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'VideoPlayerWidget.dart';
-import 'package:video_player/video_player.dart';
 import 'package:flutter_swapi/details_page.dart';
 import 'package:flutter_swapi/service/api_service.dart';
 import 'package:http/http.dart' as http;

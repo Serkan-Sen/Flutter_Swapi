@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_swapi/service/api_service.dart';
+import 'VideoPlayerWidget.dart';
+import 'package:video_player/video_player.dart';
 
 class DetailsPage extends StatefulWidget {
   DetailsPage({Key? key, required this.character, required this.index})
