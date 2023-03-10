@@ -89,11 +89,11 @@ class _BackgroundVideoState extends State<BackgroundVideo> {
           backgroundColor: Colors.black45,
           appBar: AppBar(
             backgroundColor: Color.fromARGB(255, 22, 35, 211),
-            leading: BackButton(
+            /*leading: BackButton(
               onPressed: (
                  Navigator.of(context).push(MaterialPageRoute(builder: (context)=>MyHomePage()));
               ),
-            ),
+            ),*/
             title: Text(
               "${widget.character["name"]}",
               style: TextStyle(color: Color.fromARGB(255, 209, 4, 4)),
