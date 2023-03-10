@@ -112,7 +112,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => DetailsPage(
+                      builder: (context) => BackgroundVideo(
                         character: listCharacters[index],
                         index: index,
                       ),
