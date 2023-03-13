@@ -96,7 +96,7 @@ class _BackgroundVideoState extends State<BackgroundVideo> {
             ),*/
             title: Text(
               "${widget.character["name"]}",
-              style: TextStyle(color: Color.fromARGB(255, 209, 4, 4)),
+              style: TextStyle(color: Color(0xFFFFC500),fontSize: 20.0,fontWeight: FontWeight.bold,fontStyle: FontStyle.italic,),
             ),
             actions: [],
           ),
@@ -115,146 +115,156 @@ class _BackgroundVideoState extends State<BackgroundVideo> {
                   ),
                 ),
               ),
-             Center(
-          child: planetInfo != null
-              ? Column(
-                  children: [
-                    widget.index >= 16
-                        ? Image.network(
-                            "https://starwars-visualguide.com/assets/img/characters/${widget.index + 2}.jpg",
-                            width: MediaQuery.of(context).size.width / 2,
-                          )
-                        : Image.network(
-                            "https://starwars-visualguide.com/assets/img/characters/${widget.index + 1}.jpg",
-                            width: MediaQuery.of(context).size.width / 2,
-                          ),
-                    Column(
-                      children: [
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          children: [
-                            Text(
-                              "Name:",
-                              style: TextStyle(color: Colors.white),
-                            ),
-                            Text(
-                              "${widget.character["name"]}",
-                              style: TextStyle(color: Colors.white),
-                            ),
-                          ],
-                        ),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          children: [
-                            Text(
-                              "Gender:",
-                              style: TextStyle(color: Colors.white),
-                            ),
-                            Text(
-                              "${widget.character["gender"]}",
-                              style: TextStyle(color: Colors.white),
-                            ),
-                          ],
-                        ),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          children: [
-                            Text(
-                              "Birth Year:",
-                              style: TextStyle(color: Colors.white),
-                            ),
-                            Text(
-                              "${widget.character["birth_year"]}",
-                              style: TextStyle(color: Colors.white),
-                            ),
-                          ],
-                        ),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          children: [
-                            Text(
-                              "Height:",
-                              style: TextStyle(color: Colors.white),
-                            ),
-                            Text(
-                              "${widget.character["height"]}",
-                              style: TextStyle(color: Colors.white),
-                            ),
-                          ],
-                        ),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          children: [
-                            Text(
-                              "Weight:",
-                              style: TextStyle(color: Colors.white),
-                            ),
-                            Text(
-                              "${widget.character["mass"]}",
-                              style: TextStyle(color: Colors.white),
-                            ),
-                          ],
-                        ),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          children: [
-                            Text(
-                              "Hair:",
-                              style: TextStyle(color: Colors.white),
-                            ),
-                            Text(
-                              "${widget.character["hair_color"]}",
-                              style: TextStyle(color: Colors.white),
-                            ),
-                          ],
-                        ),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          children: [
-                            Text(
-                              "Skin:",
-                              style: TextStyle(color: Colors.white),
-                            ),
-                            Text(
-                              "${widget.character["skin_color"]}",
-                              style: TextStyle(color: Colors.white),
-                            ),
-                          ],
-                        ),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          children: [
-                            Text(
-                              "Eyes:",
-                              style: TextStyle(color: Colors.white),
-                            ),
-                            Text(
-                              "${widget.character["eye_color"]}",
-                              style: TextStyle(color: Colors.white),
-                            ),
-                          ],
-                        ),
-                        
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          children: [
-                            Text(
-                              "Planet:",
-                              style: TextStyle(color: Colors.white),
-                            ),
-                            Text(
-                              "${planetInfo["name"]}",
-                              style: TextStyle(color: Colors.white),
-                            ),
-                            
-                          ],
-                        ),
-                      ],
-                    ),
-                  ],
-                )
-              : CircularProgressIndicator(),
+            Center(
+              child: Opacity(
+                opacity: 0.4,
+                child: Container(
+                  height: 300.0,
+                  width: 250.0,
+                  color: Colors.grey,
+                ),
               ),
+            ),
+              Center(
+                child: planetInfo != null
+                ? Column(
+                    children: [
+                      widget.index >= 16
+                          ? Image.network(
+                              "https://starwars-visualguide.com/assets/img/characters/${widget.index + 2}.jpg",
+                              width: MediaQuery.of(context).size.width / 2,
+                            )
+                          : Image.network(
+                              "https://starwars-visualguide.com/assets/img/characters/${widget.index + 1}.jpg",
+                              width: MediaQuery.of(context).size.width / 2,
+                            ),
+                      Column(
+                        children: [
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: [
+                              Text(
+                                "Name:",
+                                style: TextStyle(color: Color(0xFFFFC500),fontSize: 18.0,fontWeight: FontWeight.bold,fontStyle: FontStyle.italic,),
+                              ),
+                              Text(
+                                "${widget.character["name"]}",
+                                style: TextStyle(color: Color(0xFFFFC500),fontSize: 18.0,fontWeight: FontWeight.bold,fontStyle: FontStyle.italic,),
+                              ),
+                            ],
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: [
+                              Text(
+                                "Gender:",
+                                style: TextStyle(color: Color(0xFFFFC500),fontSize: 18.0,fontWeight: FontWeight.bold,fontStyle: FontStyle.italic),
+                              ),
+                              Text(
+                                "${widget.character["gender"]}",
+                                style: TextStyle(color: Color(0xFFFFC500),fontSize: 18.0,fontWeight: FontWeight.bold,fontStyle: FontStyle.italic),
+                              ),
+                            ],
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: [
+                              Text(
+                                "Birth Year:",
+                                style: TextStyle(color: Color(0xFFFFC500),fontSize: 18.0,fontWeight: FontWeight.bold,fontStyle: FontStyle.italic),
+                              ),
+                              Text(
+                                "${widget.character["birth_year"]}",
+                                style: TextStyle(color: Color(0xFFFFC500),fontSize: 18.0,fontWeight: FontWeight.bold,fontStyle: FontStyle.italic),
+                              ),
+                            ],
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: [
+                              Text(
+                                "Height:",
+                                style: TextStyle(color: Color(0xFFFFC500),fontSize: 18.0,fontWeight: FontWeight.bold,fontStyle: FontStyle.italic),
+                              ),
+                              Text(
+                                "${widget.character["height"]}",
+                                style: TextStyle(color: Color(0xFFFFC500),fontSize: 18.0,fontWeight: FontWeight.bold,fontStyle: FontStyle.italic),
+                              ),
+                            ],
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: [
+                              Text(
+                                "Weight:",
+                                style: TextStyle(color: Color(0xFFFFC500),fontSize: 18.0,fontWeight: FontWeight.bold,fontStyle: FontStyle.italic),
+                              ),
+                              Text(
+                                "${widget.character["mass"]}",
+                                style: TextStyle(color: Color(0xFFFFC500),fontSize: 18.0,fontWeight: FontWeight.bold,fontStyle: FontStyle.italic),
+                              ),
+                            ],
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: [
+                              Text(
+                                "Hair:",
+                                style: TextStyle(color: Color(0xFFFFC500),fontSize: 18.0,fontWeight: FontWeight.bold,fontStyle: FontStyle.italic),
+                              ),
+                              Text(
+                                "${widget.character["hair_color"]}",
+                                style: TextStyle(color: Color(0xFFFFC500),fontSize: 18.0,fontWeight: FontWeight.bold,fontStyle: FontStyle.italic),
+                              ),
+                            ],
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: [
+                              Text(
+                                "Skin:",
+                                style: TextStyle(color: Color(0xFFFFC500),fontSize: 18.0,fontWeight: FontWeight.bold,fontStyle: FontStyle.italic),
+                              ),
+                              Text(
+                                "${widget.character["skin_color"]}",
+                                style: TextStyle(color: Color(0xFFFFC500),fontSize: 18.0,fontWeight: FontWeight.bold,fontStyle: FontStyle.italic),
+                              ),
+                            ],
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: [
+                              Text(
+                                "Eyes:",
+                                style: TextStyle(color: Color(0xFFFFC500),fontSize: 18.0,fontWeight: FontWeight.bold,fontStyle: FontStyle.italic),
+                              ),
+                              Text(
+                                "${widget.character["eye_color"]}",
+                                style: TextStyle(color: Color(0xFFFFC500),fontSize: 18.0,fontWeight: FontWeight.bold,fontStyle: FontStyle.italic),
+                              ),
+                            ],
+                          ),
+                          
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: [
+                              Text(
+                                "Planet:",
+                                style: TextStyle(color: Color(0xFFFFC500),fontSize: 18.0,fontWeight: FontWeight.bold,fontStyle: FontStyle.italic),
+                              ),
+                              Text(
+                                "${planetInfo["name"]}",
+                                style: TextStyle(color: Color(0xFFFFC500),fontSize: 18.0,fontWeight: FontWeight.bold,fontStyle: FontStyle.italic),
+                              ),
+                              
+                            ],
+                          ),
+                        ],
+                      ),
+                    ],
+                  )
+                : CircularProgressIndicator(),
+                ),
             ],
           ),
         ),
