@@ -20,7 +20,7 @@ class _DetailsPageState extends State<DetailsPage> {
   var filmsInfo;
   @override
   void initState() {
-    // TODO: implement initState
+    // 
     super.initState();
     ApisService.planetInfo("${widget.character["homeworld"]}")
         .then((value) => {planetInfo = value, setState(() {})});
@@ -89,11 +89,11 @@ class _BackgroundVideoState extends State<BackgroundVideo> {
           backgroundColor: Colors.black45,
           appBar: AppBar(
             backgroundColor: Color.fromARGB(255, 22, 35, 211),
-            /*leading: BackButton(
-              onPressed: (
-                 Navigator.of(context).push(MaterialPageRoute(builder: (context)=>MyHomePage()));
-              ),
-            ),*/
+            leading: BackButton(
+              onPressed: (){
+                 Navigator.of(context).pop(MaterialPageRoute(builder: (context)=>MyHomePage(title: 'May The Force Be With You',)));
+              },
+            ),
             title: Text(
               "${widget.character["name"]}",
               style: TextStyle(color: Color(0xFFFFC500),fontSize: 20.0,fontWeight: FontWeight.bold,fontStyle: FontStyle.italic,),
@@ -117,7 +117,7 @@ class _BackgroundVideoState extends State<BackgroundVideo> {
               ),
             Center(
               child: Opacity(
-                opacity: 0.4,
+                opacity: 0.5,
                 child: Container(
                   height: 300.0,
                   width: 250.0,
@@ -142,8 +142,9 @@ class _BackgroundVideoState extends State<BackgroundVideo> {
                         children: [
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            //margin: const EdgeInsets.only(left: 05.0),
                             children: [
-                              Text(
+                              const Text(
                                 "Name:",
                                 style: TextStyle(color: Color(0xFFFFC500),fontSize: 18.0,fontWeight: FontWeight.bold,fontStyle: FontStyle.italic,),
                               ),
@@ -156,7 +157,7 @@ class _BackgroundVideoState extends State<BackgroundVideo> {
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: [
-                              Text(
+                              const Text(
                                 "Gender:",
                                 style: TextStyle(color: Color(0xFFFFC500),fontSize: 18.0,fontWeight: FontWeight.bold,fontStyle: FontStyle.italic),
                               ),
@@ -169,7 +170,7 @@ class _BackgroundVideoState extends State<BackgroundVideo> {
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: [
-                              Text(
+                              const Text(
                                 "Birth Year:",
                                 style: TextStyle(color: Color(0xFFFFC500),fontSize: 18.0,fontWeight: FontWeight.bold,fontStyle: FontStyle.italic),
                               ),
@@ -182,7 +183,7 @@ class _BackgroundVideoState extends State<BackgroundVideo> {
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: [
-                              Text(
+                              const Text(
                                 "Height:",
                                 style: TextStyle(color: Color(0xFFFFC500),fontSize: 18.0,fontWeight: FontWeight.bold,fontStyle: FontStyle.italic),
                               ),
@@ -195,7 +196,7 @@ class _BackgroundVideoState extends State<BackgroundVideo> {
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: [
-                              Text(
+                              const Text(
                                 "Weight:",
                                 style: TextStyle(color: Color(0xFFFFC500),fontSize: 18.0,fontWeight: FontWeight.bold,fontStyle: FontStyle.italic),
                               ),
@@ -208,7 +209,7 @@ class _BackgroundVideoState extends State<BackgroundVideo> {
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: [
-                              Text(
+                              const Text(
                                 "Hair:",
                                 style: TextStyle(color: Color(0xFFFFC500),fontSize: 18.0,fontWeight: FontWeight.bold,fontStyle: FontStyle.italic),
                               ),
@@ -221,7 +222,7 @@ class _BackgroundVideoState extends State<BackgroundVideo> {
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: [
-                              Text(
+                              const Text(
                                 "Skin:",
                                 style: TextStyle(color: Color(0xFFFFC500),fontSize: 18.0,fontWeight: FontWeight.bold,fontStyle: FontStyle.italic),
                               ),
@@ -234,7 +235,7 @@ class _BackgroundVideoState extends State<BackgroundVideo> {
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: [
-                              Text(
+                              const Text(
                                 "Eyes:",
                                 style: TextStyle(color: Color(0xFFFFC500),fontSize: 18.0,fontWeight: FontWeight.bold,fontStyle: FontStyle.italic),
                               ),
@@ -248,7 +249,7 @@ class _BackgroundVideoState extends State<BackgroundVideo> {
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: [
-                              Text(
+                              const Text(
                                 "Planet:",
                                 style: TextStyle(color: Color(0xFFFFC500),fontSize: 18.0,fontWeight: FontWeight.bold,fontStyle: FontStyle.italic),
                               ),

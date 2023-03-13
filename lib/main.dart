@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(primarySwatch: Colors.amber),
-      home: const MyHomePage(title: 'Flutter SWAPI'),
+      home: const MyHomePage(title: 'May The Force Be With You'),
     );
   }
 }
@@ -61,7 +61,7 @@ class _MyHomePageState extends State<MyHomePage> {
         backgroundColor: Color.fromARGB(255, 22, 35, 211),
         title: Text(
           widget.title,
-          style: TextStyle(color: Color.fromARGB(255, 25, 241, 5)),
+          style: TextStyle(color: Color(0xFFFFC500),fontSize: 18.0,fontWeight: FontWeight.bold,fontStyle: FontStyle.italic,),
         ),
         actions: [
           IconButton(
