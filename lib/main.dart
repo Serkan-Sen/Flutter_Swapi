@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_swapi/details_page.dart';
 import 'package:flutter_swapi/service/api_service.dart';
 import 'package:http/http.dart' as http;
+import 'package:easy_search_bar/easy_search_bar.dart';
 
 void main() {
   runApp(const MyApp());
@@ -61,7 +62,12 @@ class _MyHomePageState extends State<MyHomePage> {
         backgroundColor: Color.fromARGB(255, 22, 35, 211),
         title: Text(
           widget.title,
-          style: TextStyle(color: Color(0xFFFFC500),fontSize: 18.0,fontWeight: FontWeight.bold,fontStyle: FontStyle.italic,),
+          style: TextStyle(
+            color: Color(0xFFFFC500),
+            fontSize: 18.0,
+            fontWeight: FontWeight.bold,
+            fontStyle: FontStyle.italic,
+          ),
         ),
         actions: [
           IconButton(
@@ -91,12 +97,19 @@ class _MyHomePageState extends State<MyHomePage> {
               Icons.refresh,
               color: Colors.black,
             ),
-          )
+          ),
+          /*IconButton(
+            icon: const Icon(Icons.search),
+            onPressed: () {
+              showSearch(
+                context: context,
+                delegate: MySearchDelegate(),
+              );
+            },
+          ),*/
         ],
       ),
-      body: 
-        ListView.builder(
-        
+      body: ListView.builder(
           itemCount: listCharacters.length,
           itemBuilder: (BuildContext context, int index) {
             return ListTile(
@@ -133,3 +146,39 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 }
+
+/*class MySearchDelegate extends SearchDelegate {
+  @override
+  Widget? buildLeading(BuildContext context) => IconButton(
+        icon: const Icon(Icons.arrow_back),
+        onPressed: () => close(context, null), // close search Bar
+      );
+  @override
+  List<Widget>? buildActions(BuildContext context) => [
+        IconButton(
+          icon: const Icon(Icons.clear),
+          onPressed: () {
+            if (query.isEmpty) {
+              close(context, null); // if search bar empty close search Bar
+            } else {
+              query = '';
+            }
+          },
+        ),
+      ];
+  @override
+  Widget? buildResults(BuildContext context) => Container();
+
+  @override
+  Widget? buildSuggestions(BuildContext context) {
+    List<String> suggestions = [
+      'Anakin',
+      'Luke',
+      'Yoda',
+    ];
+
+    return ListView.builder(
+      itemBuilder: itemBuilder;
+      );
+  }
+}*/
